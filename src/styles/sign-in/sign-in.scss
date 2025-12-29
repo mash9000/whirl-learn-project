@@ -1,0 +1,19 @@
+@use 'sass:map';
+@use '../colors' as colors;
+
+@font-face {
+  font-family: "Inter Regular";
+  font-style: normal;
+  font-weight: 400;
+  src: url(/public/fonts/Inter/inter-regular-webfont.woff2) format('woff');
+}
+
+.sign-in {
+  font: {
+    family: "Inter Regular";
+    size: 15px;
+  }
+  color: map.get(colors.$colors, 'soft-blue');
+  margin-right: 20px;
+  text-decoration: none;
+}
