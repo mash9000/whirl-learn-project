@@ -1,6 +1,8 @@
 import '../styles/header/header.scss';
 import '../styles/logo/logo.scss';
 import type {IPointOfNavbar} from "../model/interfaces/IPointOfNavbar.ts";
+import {SingIn} from "./SignIn.tsx";
+import {BookADemo} from "./BookADemo.tsx";
 
 type HeaderProps = {
     points: IPointOfNavbar[];
@@ -16,6 +18,8 @@ export const Header = ({points}: HeaderProps) => {
                 {points.map((point: IPointOfNavbar) => <a key={point.getTitle()}
                                                           href={point.getLink().href}>{point.getTitle()}</a>)}
             </nav>
+            <SingIn/>
+            <BookADemo/>
         </header>
     );
 }
