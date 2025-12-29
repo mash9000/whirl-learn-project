@@ -5,6 +5,7 @@ import {AppConfig} from "../data/AppConfig.ts";
 export const WhirlMainComponent = () => {
     return (
         <Header points={AppConfig.NAVBAR_POINTS}
-                signIn={AppConfig.SIGN_IN_PROPERTIES}/>
+                signIn={AppConfig.SIGN_IN_LINK_PROPERTIES}
+                bookADemo={AppConfig.BOOK_A_DEMO_BUTTON_PROPERTIES}/>
     )
 }

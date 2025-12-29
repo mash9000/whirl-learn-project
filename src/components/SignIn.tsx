@@ -1,8 +1,8 @@
 import '../styles/sign-in/sign-in.scss.scss';
-import type {ISignIn} from "../model/interfaces/ISignIn.ts";
+import type {ISignInLink} from "../model/interfaces/ISignInLink.ts";
 
 type SignInProps = {
-    signInUrl: ISignIn;
+    signInUrl: ISignInLink;
 }
 
 export const SingIn = ({signInUrl}: SignInProps) => {

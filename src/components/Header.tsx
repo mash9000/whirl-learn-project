@@ -3,14 +3,16 @@ import '../styles/logo/logo.scss';
 import type {IPointOfNavbar} from "../model/interfaces/IPointOfNavbar.ts";
 import {SingIn} from "./SignIn.tsx";
 import {BookADemo} from "./BookADemo.tsx";
-import type {ISignIn} from "../model/interfaces/ISignIn.ts";
+import type {ISignInLink} from "../model/interfaces/ISignInLink.ts";
+import type {IBookADemoButton} from "../model/interfaces/IBookADemoButton.ts";
 
 type HeaderProps = {
     points: IPointOfNavbar[],
-    signIn: ISignIn,
+    signIn: ISignInLink,
+    bookADemo: IBookADemoButton
 }
 
-export const Header = ({points, signIn}: HeaderProps) => {
+export const Header = ({points, signIn, bookADemo}: HeaderProps) => {
     return (
         <header className='header'>
             <img alt='logo'
@@ -21,7 +23,7 @@ export const Header = ({points, signIn}: HeaderProps) => {
                                                           href={point.getLink().href}>{point.getTitle()}</a>)}
             </nav>
             <SingIn signInUrl={signIn}/>
-            <BookADemo/>
+            <BookADemo bookADemo={bookADemo}/>
         </header>
     );
 }
