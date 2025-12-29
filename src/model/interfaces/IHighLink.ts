@@ -1,4 +1,4 @@
-export interface ISignInLink {
+export interface IHighLink {
     getString(): string;
 
     getLink(): URL;

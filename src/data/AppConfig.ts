@@ -1,6 +1,7 @@
 import type {IPointOfNavbar} from "../model/interfaces/IPointOfNavbar.ts";
-import type {ISignInLink} from "../model/interfaces/ISignInLink.ts";
+import type {IHighLink} from "../model/interfaces/IHighLink.ts";
 import type {IBookADemoButton} from "../model/interfaces/IBookADemoButton.ts";
+import type {IWrapper} from "../model/interfaces/IWrapper.ts";
 
 export class AppConfig {
     public static readonly NAVBAR_POINTS: IPointOfNavbar[] = [
@@ -21,12 +22,27 @@ export class AppConfig {
             getLink: () => new URL('http://localhost:8080')
         }
     ];
-    public static readonly SIGN_IN_LINK_PROPERTIES: ISignInLink = {
+    public static readonly SIGN_IN_LINK_PROPERTIES: IHighLink = {
         getString: () => 'Sign In',
         getLink: () => new URL('http://localhost:8080')
     };
     public static readonly BOOK_A_DEMO_BUTTON_PROPERTIES: IBookADemoButton = {
         getString: () => 'Book a demo',
+        getLink: () => new URL('http://localhost:8080')
+    };
+
+    public static readonly WRAPPER_DATA: IWrapper = {
+        getHeading: () => 'Your everyday tasks, automated.',
+        getDescription: () => 'Whirl lets you design and streamline your\n' +
+            '                everyday tasks and workflows in just a few clicks.',
+        getLearnMoreLinkData: () => ({
+            getString: () => 'Learn more >',
+            getLink: () => new URL('http://localhost:8080')
+        })
+    };
+
+    public static readonly LEARN_MORE_LINK_PROPERTIES: IHighLink = {
+        getString: () => 'Learn more >',
         getLink: () => new URL('http://localhost:8080')
     };
 }

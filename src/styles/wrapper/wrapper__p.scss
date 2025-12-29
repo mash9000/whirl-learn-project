@@ -1,0 +1,20 @@
+@use 'sass:map';
+@use '../colors' as colors;
+
+@font-face {
+  font-family: "Inter Regular";
+  font-style: normal;
+  font-weight: 400;
+  src: url(/public/fonts/Inter/inter-regular-webfont.woff2) format('woff');
+}
+
+.wrapper__p {
+  font: {
+    family: 'Inter Regular';
+    size: 20px;
+  }
+  line-height: 30px;
+  letter-spacing: .2px;
+  color: map.get(colors.$colors, 'black-text');
+  width: 351px;
+}

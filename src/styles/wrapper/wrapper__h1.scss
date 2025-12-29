@@ -1,0 +1,20 @@
+@use 'sass:map';
+@use '../colors' as colors;
+
+@font-face {
+  font-family: "Fraunces Regular";
+  font-style: normal;
+  font-weight: 400;
+  src: url(/public/fonts/Frauncess/Fraunces-Regular.ttf);
+}
+
+.wrapper__h1 {
+  font: {
+    family: "Fraunces Regular";
+    size: 58px;
+  }
+  line-height: 63.8px;
+  letter-spacing: .2px;
+  color: map.get(colors.$colors, 'black-text');
+  width: 485px;
+}
