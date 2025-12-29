@@ -1,9 +1,10 @@
 import '../styles/whirl-main-component/whirl-main-component.scss';
 import {Header} from "./Header.tsx";
-import {getNavbarGetPoints} from "../data/NavbarGetPoints.ts";
+import {AppConfig} from "../data/AppConfig.ts";
 
 export const WhirlMainComponent = () => {
     return (
-        <Header points={getNavbarGetPoints().getPoints()}/>
+        <Header points={AppConfig.NAVBAR_POINTS}
+                signIn={AppConfig.SIGN_IN_PROPERTIES}/>
     )
 }
