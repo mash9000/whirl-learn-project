@@ -18,17 +18,19 @@ type HeaderProps = {
 export const Header = ({points, signIn, bookADemo}: HeaderProps) => {
     return (
         <header className='header'>
-            <img alt='logo'
-                 className='logo'
-                 src='../../public/images/logo.svg'/>
-            <nav className='header__navbar'>
-                {points.map((point: IPointOfNavbar) => <a key={point.getTitle()}
-                                                          href={point.getLink().href}
-                                                          className='header__navbar__link header__navbar__link--hover'>{point.getTitle()}</a>)}
-            </nav>
             <div>
-                <SingIn signInUrl={signIn}/>
-                <BookADemo bookADemo={bookADemo}/>
+                <img alt='logo'
+                     className='logo'
+                     src='../../public/images/logo.svg'/>
+                <nav className='header__navbar'>
+                    {points.map((point: IPointOfNavbar) => <a key={point.getTitle()}
+                                                              href={point.getLink().href}
+                                                              className='header__navbar__link header__navbar__link--hover'>{point.getTitle()}</a>)}
+                </nav>
+                <div>
+                    <SingIn signInUrl={signIn}/>
+                    <BookADemo bookADemo={bookADemo}/>
+                </div>
             </div>
         </header>
     );
