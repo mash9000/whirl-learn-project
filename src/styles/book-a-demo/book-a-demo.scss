@@ -1,3 +1,23 @@
+@use 'sass:map';
+@use '../colors' as colors;
+
+@font-face {
+  font-family: "Inter Regular";
+  font-style: normal;
+  font-weight: 400;
+  src: url(/public/fonts/Inter/inter-regular-webfont.woff2) format('woff');
+}
+
 .book-a-demo {
   margin-right: 105px;
+  width: 139px;
+  height: 36px;
+  border: none;
+  outline: none;
+  color: #fff;
+  background: map.get(colors.$colors, 'soft-blue');
+  font: {
+    family: "Inter Regular";
+    size: 15px;
+  }
 }
