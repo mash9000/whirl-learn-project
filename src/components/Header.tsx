@@ -1,4 +1,7 @@
 import '../styles/header/header.scss';
+import '../styles/header/header__navbar.scss';
+import '../styles/header/header__navbar__link.scss';
+import '../styles/header/header__navbar__link--hover.scss';
 import '../styles/logo/logo.scss';
 import type {IPointOfNavbar} from "../model/interfaces/IPointOfNavbar.ts";
 import {SingIn} from "./SignIn.tsx";
@@ -18,12 +21,15 @@ export const Header = ({points, signIn, bookADemo}: HeaderProps) => {
             <img alt='logo'
                  className='logo'
                  src='../../public/images/logo.svg'/>
-            <nav>
+            <nav className='header__navbar'>
                 {points.map((point: IPointOfNavbar) => <a key={point.getTitle()}
-                                                          href={point.getLink().href}>{point.getTitle()}</a>)}
+                                                          href={point.getLink().href}
+                                                          className='header__navbar__link header__navbar__link--hover'>{point.getTitle()}</a>)}
             </nav>
-            <SingIn signInUrl={signIn}/>
-            <BookADemo bookADemo={bookADemo}/>
+            <div>
+                <SingIn signInUrl={signIn}/>
+                <BookADemo bookADemo={bookADemo}/>
+            </div>
         </header>
     );
 }
