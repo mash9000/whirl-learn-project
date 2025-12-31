@@ -2,6 +2,7 @@ import type {IPointOfNavbar} from "../model/interfaces/IPointOfNavbar.ts";
 import type {IHighLink} from "../model/interfaces/IHighLink.ts";
 import type {IBookADemoButton} from "../model/interfaces/IBookADemoButton.ts";
 import type {IWrapper} from "../model/interfaces/IWrapper.ts";
+import type {ITrustedCompanies} from "../model/interfaces/ITrustedCompanies.ts";
 
 export class AppConfig {
     public static readonly NAVBAR_POINTS: IPointOfNavbar[] = [
@@ -45,4 +46,9 @@ export class AppConfig {
         getString: () => 'Learn more >',
         getLink: () => new URL('http://localhost:8080')
     };
+
+    public static readonly TRUSTED_COMPANIES: ITrustedCompanies = {
+        getHeading: () => 'Trusted by 50,000+ companies',
+        getNamesOfImages: () => ['carded', 'focusfox', 'nowintech', 'optimer']
+    }
 }
