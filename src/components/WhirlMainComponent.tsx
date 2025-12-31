@@ -2,6 +2,7 @@ import '../styles/whirl-main-component/whirl-main-component.scss';
 import {Header} from "./Header.tsx";
 import {AppConfig} from "../data/AppConfig.ts";
 import {Wrapper} from "./Wrapper.tsx";
+import {TrustedCompany} from "./TrustedCompany.tsx";
 
 export const WhirlMainComponent = () => {
     return (
@@ -11,6 +12,7 @@ export const WhirlMainComponent = () => {
                     bookADemo={AppConfig.BOOK_A_DEMO_BUTTON_PROPERTIES}/>
             <Wrapper bookADemo={AppConfig.BOOK_A_DEMO_BUTTON_PROPERTIES}
                      wrapperData={AppConfig.WRAPPER_DATA}/>
+            <TrustedCompany/>
         </>
     )
 }

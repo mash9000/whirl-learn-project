@@ -1,7 +1,7 @@
 import '../styles/wrapper/wrapper.scss';
-import '../styles/wrapper/wrapper__h1.scss';
-import '../styles/wrapper/wrapper__p.scss';
-import '../styles/wrapper/wrapper__links.scss';
+import '../styles/wrapper/__h1/wrapper__h1.scss';
+import '../styles/wrapper/__p/wrapper__p.scss';
+import '../styles/wrapper/__links/wrapper__links.scss';
 import {BookADemo} from "./BookADemo.tsx";
 import {HighLink} from "./HighLink.tsx";
 import type {IBookADemoButton} from "../model/interfaces/IBookADemoButton.ts";

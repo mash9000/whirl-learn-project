@@ -1,7 +1,7 @@
 import '../styles/header/header.scss';
-import '../styles/header/header__navbar.scss';
-import '../styles/header/header__navbar__link.scss';
-import '../styles/header/header__navbar__link--hover.scss';
+import '../styles/header/__navbar/header__navbar.scss';
+import '../styles/header/__navbar/__link/header__navbar__link.scss';
+import '../styles/header/__navbar/__link/header__navbar__link--hover.scss';
 import '../styles/logo/logo.scss';
 import type {IPointOfNavbar} from "../model/interfaces/IPointOfNavbar.ts";
 import {HighLink} from "./HighLink.tsx";
