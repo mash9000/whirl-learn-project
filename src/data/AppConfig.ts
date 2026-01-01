@@ -3,7 +3,8 @@ import type {IHighLink} from "../model/interfaces/IHighLink.ts";
 import type {IBookADemoButton} from "../model/interfaces/IBookADemoButton.ts";
 import type {IWrapper} from "../model/interfaces/IWrapper.ts";
 import type {ITrustedCompanies} from "../model/interfaces/ITrustedCompanies.ts";
-import type {IFactCards} from "../model/interfaces/IFactCards.ts";
+import type {IFactCard} from "../model/interfaces/IFactCard.ts";
+import {BgColors} from "./BgColors.ts";
 
 export class AppConfig {
     public static readonly NAVBAR_POINTS: IPointOfNavbar[] = [
@@ -53,21 +54,24 @@ export class AppConfig {
         getNamesOfImages: () => ['carded', 'focusfox', 'nowintech', 'optimer']
     }
 
-    public static readonly FACT_CARDS: IFactCards[] = [
+    public static readonly FACT_CARDS: IFactCard[] = [
         {
             getNameOfImage: () => 'thunderbolt',
             getTitle: () => 'Fast. Really fast.',
-            getParagraph: () => 'Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.'
+            getParagraph: () => 'Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
+            getBgColor: () => BgColors.YELLOW.toString()
         },
         {
             getNameOfImage: () => 'money',
             getTitle: () => 'More bang for buck.',
-            getParagraph: () => 'Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.'
+            getParagraph: () => 'Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
+            getBgColor: () => BgColors.BLUE.toString()
         },
         {
             getNameOfImage: () => 'ok-gesture',
             getTitle: () => 'Safe and secure.',
-            getParagraph: () => 'Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.'
+            getParagraph: () => 'Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
+            getBgColor: () => BgColors.PINK.toString()
         }
     ];
 }

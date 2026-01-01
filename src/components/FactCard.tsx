@@ -2,16 +2,18 @@ import '../styles/fact-card/fact-card.scss';
 import '../styles/fact-card/__icons/fact-card__icons.scss';
 import '../styles/fact-card/__heading/fact-card__heading.scss';
 import '../styles/fact-card/__p/fact-card__p.scss';
-import type {IFactCards} from "../model/interfaces/IFactCards.ts";
+import type {IFactCard} from "../model/interfaces/IFactCard.ts";
 
 type FactCardProps = {
-    factData: IFactCards
+    factData: IFactCard
 }
 
 export const FactCard = ({factData}: FactCardProps) => {
     const pathToTheFolderWithIconsForFacts: string = '../../public/images/card-facts/';
     return (
-        <div className="fact-card">
+        <div className="fact-card" style={{
+            backgroundColor: factData.getBgColor()
+        }}>
             <img
                 src={`${pathToTheFolderWithIconsForFacts}${factData.getNameOfImage()}.svg`}
                 alt={`${factData.getNameOfImage()} icon`}
