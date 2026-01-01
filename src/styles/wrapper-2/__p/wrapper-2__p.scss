@@ -1,3 +1,11 @@
-.wrapper-2__p {
+@use '../../generator-fonts' as gf;
 
+.wrapper-2__p {
+  display: inline-block;
+  width: 431px;
+  @include gf.generator-fonts('inter');
+  color: #fff;
+  line-height: 27px;
+  letter-spacing: .2px;
+  margin-bottom: 17px;
 }
