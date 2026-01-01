@@ -1,0 +1,9 @@
+.block-of-promises__accordion {
+  width: 486px;
+  height: 345px;
+  display: flex;
+  flex-direction: column;
+  transition: max-height 0.3s ease;
+
+  outline: 1px dashed royalblue;
+}

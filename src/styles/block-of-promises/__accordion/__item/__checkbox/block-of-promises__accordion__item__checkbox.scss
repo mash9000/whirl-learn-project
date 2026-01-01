@@ -1,0 +1,16 @@
+.block-of-promises__accordion__item__checkbox {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  width: 30px;
+  height: 30px;
+  background: url(../../../../public/images/accordion-items/vector.svg) no-repeat center center;
+  background-size: 18px 10px;
+  cursor: pointer;
+
+  &:checked ~ .block-of-promises__accordion__item__p {
+    height: 72px;
+    display: inline;
+    transition: 1s;
+  }
+}

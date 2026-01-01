@@ -1,0 +1,12 @@
+@use 'sass:map';
+@use '../../colors' as color;
+
+.block-of-promises__cover {
+  margin-top: 120px;
+  width: 100%;
+  height: 694px;
+  background-color: map.get(color.$colors, 'pale-blue');
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

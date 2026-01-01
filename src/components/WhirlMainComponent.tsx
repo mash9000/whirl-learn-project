@@ -6,6 +6,7 @@ import {Wrapper} from "./Wrapper.tsx";
 import {TrustedCompanies} from "./TrustedCompanies.tsx";
 import {FactCard} from "./FactCard.tsx";
 import type {IFactCard} from "../model/interfaces/IFactCard.ts";
+import {BlockOfPromises} from "./BlockOfPromises.tsx";
 
 export const WhirlMainComponent = () => {
     return (
@@ -21,6 +22,7 @@ export const WhirlMainComponent = () => {
                     <FactCard key={card.getTitle()} factData={card}/>
                 )}
             </div>
+            <BlockOfPromises/>
         </>
     )
 }

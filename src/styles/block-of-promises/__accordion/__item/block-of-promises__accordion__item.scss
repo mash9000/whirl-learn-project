@@ -1,0 +1,21 @@
+@use 'sass:map';
+@use '../../../colors' as color;
+
+.block-of-promises__accordion__item {
+  width: inherit;
+  height: 64px;
+  box-sizing: border-box;
+  border-top: 1px solid map.get(color.$colors, 'accordion-item-border');
+  border-bottom: 1px solid map.get(color.$colors, 'accordion-item-border');
+  display: grid;
+  grid-template: 64px / 32px 356px 18px;
+  align-items: center;
+
+  &:has(.block-of-promises__accordion__item__checkbox:checked) {
+    .block-of-promises__accordion__item__p {
+      max-height: 72px;
+    }
+    margin-bottom: 72px;
+    transition: max-height 0.3s ease;
+  }
+}
