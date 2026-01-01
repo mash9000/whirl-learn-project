@@ -1,19 +1,10 @@
 @use 'sass:map';
 @use '../../colors' as colors;
-
-@font-face {
-  font-family: "Fraunces Regular";
-  font-style: normal;
-  font-weight: 400;
-  src: url(/public/fonts/Frauncess/Fraunces-Regular.ttf);
-}
+@use '../../generator-fonts' as gf;
 
 .fact-card__heading {
-  font: {
-    family: "Fraunces Regular";
-    size: 25px;
-  }
+  @include gf.generator-fonts('heading');
+  font-size: 25px;
   line-height: 31px;
-  letter-spacing: .2px;
   color: map.get(colors.$colors, 'black-text');
 }

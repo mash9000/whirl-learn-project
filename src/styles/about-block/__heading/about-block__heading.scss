@@ -1,22 +1,11 @@
 @use 'sass:map';
 @use '../../colors' as color;
-
-@font-face {
-  font-family: "Fraunces Regular";
-  font-style: normal;
-  font-weight: 400;
-  src: url(/public/fonts/Frauncess/Fraunces-Regular.ttf);
-}
+@use '../../generator-fonts' as gf;
 
 .about-block__heading {
   display: inline-block;
   width: 400px;
   margin-right: 100px;
-  font: {
-    family: "Fraunces Regular";
-    size: 42px;
-  }
-  line-height: 50.4px;
-  letter-spacing: .2px;
+  @include gf.generator-fonts('heading');
   color: map.get(color.$colors, 'black-text');
 }

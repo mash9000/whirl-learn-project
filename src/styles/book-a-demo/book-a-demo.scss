@@ -1,12 +1,6 @@
 @use 'sass:map';
 @use '../colors' as colors;
-
-@font-face {
-  font-family: "Inter Regular";
-  font-style: normal;
-  font-weight: 400;
-  src: url(/public/fonts/Inter/inter-regular-webfont.woff2) format('woff');
-}
+@use '../generator-fonts' as gf;
 
 .book-a-demo {
   width: 139px;
@@ -15,8 +9,5 @@
   outline: none;
   color: #fff;
   background: map.get(colors.$colors, 'soft-blue');
-  font: {
-    family: "Inter Regular";
-    size: 15px;
-  }
+  @include gf.generator-fonts('inter');
 }

@@ -1,18 +1,10 @@
 @use 'sass:map';
 @use '../../../colors' as colors;
-
-@font-face {
-  font-family: "Inter Regular";
-  font-style: normal;
-  font-weight: 400;
-  src: url(/public/fonts/Inter/inter-regular-webfont.woff2) format('woff');
-}
+@use '../../../generator-fonts' as gf;
 
 .header__navbar__link {
-  font: {
-    family: "Inter Regular";
-    size: 16px;
-  }
+  @include gf.generator-fonts('inter');
+  font-size: 16px;
   text-decoration: none;
   color: map.get(colors.$colors, 'gray-text');
 }

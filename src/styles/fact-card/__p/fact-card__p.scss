@@ -1,19 +1,10 @@
 @use 'sass:map';
 @use '../../colors' as colors;
-
-@font-face {
-  font-family: "Inter Regular";
-  font-style: normal;
-  font-weight: 400;
-  src: url(/public/fonts/Inter/inter-regular-webfont.woff2) format('woff');
-}
+@use '../../generator-fonts' as gf;
 
 .fact-card__p {
   color: map.get(colors.$colors, 'black-text');
-  font: {
-    family: "Inter Regular";
-    size: 15px;
-  }
+  @include gf.generator-fonts('inter');
   line-height: 24px;
   letter-spacing: .2px;
 }

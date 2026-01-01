@@ -1,4 +1,3 @@
-import '../styles/whirl-main-component/whirl-main-component.scss';
 import '../styles/fact-card/__box/fact-card__box.scss';
 import {Header} from "./Header.tsx";
 import {AppConfig} from "../data/AppConfig.ts";

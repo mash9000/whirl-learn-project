@@ -1,6 +1,20 @@
 @use 'sass:map';
 @use './colors' as colors;
 
+@font-face {
+  font-family: "Fraunces Regular";
+  font-style: normal;
+  font-weight: 400;
+  src: url(/public/fonts/Frauncess/Fraunces-Regular.ttf);
+}
+
+@font-face {
+  font-family: "Inter Regular";
+  font-style: normal;
+  font-weight: 400;
+  src: url(/public/fonts/Inter/inter-regular-webfont.woff2) format('woff');
+}
+
 @mixin generator-fonts($for-element) {
   @if ($for-element == 'navbar') {
     font: {
@@ -9,7 +23,19 @@
     letter-spacing: .2px;
     line-height: 24px;
     color: map.get(colors.$colors, 'grey-text');
+  } @else if ($for-element == 'heading') {
+    font: {
+      family: "Fraunces Regular";
+      size: 42px;
+    }
+    line-height: 50.4px;
+    letter-spacing: .2px;
+  } @else if ($for-element == 'inter') {
+    font: {
+      family: "Inter Regular";
+      size: 15px;
+    }
   } @else {
-    @error 'неверный тип элемента';
+    @error 'incorrect element type';
   }
 }

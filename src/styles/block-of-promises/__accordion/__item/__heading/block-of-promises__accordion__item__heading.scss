@@ -1,20 +1,10 @@
 @use 'sass:map';
 @use '../../../../colors' as color;
-
-@font-face {
-  font-family: "Fraunces Regular";
-  font-style: normal;
-  font-weight: 400;
-  src: url(/public/fonts/Frauncess/Fraunces-Regular.ttf);
-}
+@use '../../../../generator-fonts' as gf;
 
 .block-of-promises__accordion__item__heading {
-  font: {
-    family: "Fraunces Regular";
-    size: 20px;
-  }
-  line-height: 25.2px;
-  letter-spacing: .2px;
+  @include gf.generator-fonts('heading');
+  font-size: 20px;
   color: map.get(color.$colors, 'accordion-ittem-heading-non-active');
   margin-left: 16px;
 }
