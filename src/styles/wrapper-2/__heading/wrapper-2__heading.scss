@@ -1,3 +1,10 @@
-.wrapper-2__heading {
+@use '../../generator-fonts' as gf;
 
+.wrapper-2__heading {
+  display: inline-block;
+  width: 403px;
+  @include gf.generator-fonts('heading');
+  line-height: 50.4px;
+  color: #fff;
+  margin-bottom: 18px;
 }
