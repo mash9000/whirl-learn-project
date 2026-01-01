@@ -26,10 +26,10 @@
 
   &:has(.block-of-promises__accordion__item__checkbox:checked) {
     .block-of-promises__accordion__item__p {
-      max-height: 112px;
+      max-height: 92px;
     }
 
-    height: 176px;
+    height: 156px;
     transition: max-height 0.3s ease;
 
     .block-of-promises__accordion__item__heading {
