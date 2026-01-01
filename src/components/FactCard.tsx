@@ -12,7 +12,7 @@ export const FactCard = ({factData}: FactCardProps) => {
     const pathToTheFolderWithIconsForFacts: string = '../../public/images/card-facts/';
     return (
         <div className="fact-card" style={{
-            backgroundColor: factData.getBgColor()
+            backgroundColor: factData.getBgColor().getColor()
         }}>
             <img
                 src={`${pathToTheFolderWithIconsForFacts}${factData.getNameOfImage()}.svg`}

@@ -1,3 +1,5 @@
+import type {IColor} from "./IColor.ts";
+
 export interface IFactCard {
     getNameOfImage(): string;
 
@@ -5,5 +7,5 @@ export interface IFactCard {
 
     getParagraph(): string;
 
-    getBgColor(): string;
+    getBgColor(): IColor;
 }

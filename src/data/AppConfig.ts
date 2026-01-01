@@ -4,7 +4,6 @@ import type {IBookADemoButton} from "../model/interfaces/IBookADemoButton.ts";
 import type {IWrapper} from "../model/interfaces/IWrapper.ts";
 import type {ITrustedCompanies} from "../model/interfaces/ITrustedCompanies.ts";
 import type {IFactCard} from "../model/interfaces/IFactCard.ts";
-import {BgColors} from "./BgColors.ts";
 
 export class AppConfig {
     public static readonly NAVBAR_POINTS: IPointOfNavbar[] = [
@@ -44,11 +43,6 @@ export class AppConfig {
         })
     };
 
-    public static readonly LEARN_MORE_LINK_PROPERTIES: IHighLink = {
-        getString: () => 'Learn more >',
-        getLink: () => new URL('http://localhost:8080')
-    };
-
     public static readonly TRUSTED_COMPANIES: ITrustedCompanies = {
         getHeading: () => 'Trusted by 50,000+ companies',
         getNamesOfImages: () => ['carded', 'focusfox', 'nowintech', 'optimer']
@@ -59,19 +53,19 @@ export class AppConfig {
             getNameOfImage: () => 'thunderbolt',
             getTitle: () => 'Fast. Really fast.',
             getParagraph: () => 'Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
-            getBgColor: () => BgColors.YELLOW.toString()
+            getBgColor: () => ({getColor: () => '#FAEA73'})
         },
         {
             getNameOfImage: () => 'money',
             getTitle: () => 'More bang for buck.',
             getParagraph: () => 'Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
-            getBgColor: () => BgColors.BLUE.toString()
+            getBgColor: () => ({getColor: () => '#CCEFF6'})
         },
         {
             getNameOfImage: () => 'ok-gesture',
             getTitle: () => 'Safe and secure.',
             getParagraph: () => 'Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
-            getBgColor: () => BgColors.PINK.toString()
+            getBgColor: () => ({getColor: () => '#F7CEDC'})
         }
     ];
 }
