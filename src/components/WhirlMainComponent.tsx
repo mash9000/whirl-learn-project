@@ -8,6 +8,7 @@ import {FactCard} from "./FactCard.tsx";
 import type {IFactCard} from "../model/interfaces/IFactCard.ts";
 import {BlockOfPromises} from "./BlockOfPromises.tsx";
 import {AboutBlock} from "./AboutBlock.tsx";
+import {Wrapper2} from "./Wrapper-2.tsx";
 
 export const WhirlMainComponent = () => {
     return (
@@ -26,6 +27,7 @@ export const WhirlMainComponent = () => {
             </div>
             <BlockOfPromises accordionItems={AppConfig.BLOCK_OF_PROMISES}/>
             <AboutBlock factData={AppConfig.ABOUT_BLOCK}/>
+            <Wrapper2 data={AppConfig.WRAPPER_2_DATA} bookADemo={AppConfig.BOOK_A_DEMO_BUTTON_PROPERTIES}/>
         </>
     )
 }

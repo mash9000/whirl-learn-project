@@ -5,6 +5,7 @@ import type {IWrapper} from "../model/interfaces/IWrapper.ts";
 import type {ITrustedCompanies} from "../model/interfaces/ITrustedCompanies.ts";
 import type {IFactCard} from "../model/interfaces/IFactCard.ts";
 import type {IAccordionItem} from "../model/interfaces/IAccordionItem.ts";
+import type {IWrapper2} from "../model/interfaces/IWrapper2.ts";
 
 export class AppConfig {
     public static readonly NAVBAR_POINTS: IPointOfNavbar[] = [
@@ -122,4 +123,15 @@ export class AppConfig {
             getBgColor: () => ({getColor: () => 'transparent'})
         },
     ]
+
+    public static readonly WRAPPER_2_DATA: IWrapper2 = {
+        getBgName: () => 'light-bulb',
+        getHeading: () => 'Set, forget, and then track.',
+        getParagraph: () => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+        getList: () => [
+            'Understand your options',
+            'No lock-ins',
+            'You own the shares'
+        ]
+    }
 }
