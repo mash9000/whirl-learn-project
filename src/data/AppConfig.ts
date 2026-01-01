@@ -4,6 +4,7 @@ import type {IBookADemoButton} from "../model/interfaces/IBookADemoButton.ts";
 import type {IWrapper} from "../model/interfaces/IWrapper.ts";
 import type {ITrustedCompanies} from "../model/interfaces/ITrustedCompanies.ts";
 import type {IFactCard} from "../model/interfaces/IFactCard.ts";
+import type {IAccordionItem} from "../model/interfaces/IAccordionItem.ts";
 
 export class AppConfig {
     public static readonly NAVBAR_POINTS: IPointOfNavbar[] = [
@@ -68,4 +69,27 @@ export class AppConfig {
             getBgColor: () => ({getColor: () => '#F7CEDC'})
         }
     ];
+
+    public static readonly BLOCK_OF_PROMISES: IAccordionItem[] = [
+        {
+            getImageName: () => 'pin',
+            getHeading: () => 'Anti-loss technology',
+            getParagraph: () => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
+        },
+        {
+            getImageName: () => 'smile',
+            getHeading: () => 'Exchange easily',
+            getParagraph: () => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
+        },
+        {
+            getImageName: () => 'thunderbolt',
+            getHeading: () => 'Plenty of options',
+            getParagraph: () => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
+        },
+        {
+            getImageName: () => 'post',
+            getHeading: () => 'Fully encrypted',
+            getParagraph: () => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
+        }
+    ]
 }

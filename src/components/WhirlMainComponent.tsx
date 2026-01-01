@@ -22,7 +22,7 @@ export const WhirlMainComponent = () => {
                     <FactCard key={card.getTitle()} factData={card}/>
                 )}
             </div>
-            <BlockOfPromises/>
+            <BlockOfPromises accordionItems={AppConfig.BLOCK_OF_PROMISES}/>
         </>
     )
 }
