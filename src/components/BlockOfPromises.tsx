@@ -1,4 +1,7 @@
+import '../styles/block-of-promises/block-of-promises.scss';
+import '../styles/block-of-promises/__cover/block-of-promises__cover.scss';
 import '../styles/block-of-promises/__accordion/block-of-promises__accordion.scss';
+import '../styles/block-of-promises/__heading/block-of-promise__heading.scss';
 import type {IAccordionItem} from "../model/interfaces/IAccordionItem.ts";
 import {AccordionItem} from "./AccordionItem.tsx";
 
@@ -13,10 +16,8 @@ export const BlockOfPromises = ({accordionItems}: BlockOfPromisesProps) => {
                 <h3 className='block-of-promise__heading'>We will take care of
                     everything, so you can get back to relaxing.</h3>
                 <div className='block-of-promises__accordion'>
-                    {
-                        accordionItems.map((item: IAccordionItem) =>
-                            <AccordionItem key={item.getHeading()} accordionItem={item}/>)
-                    }
+                    {accordionItems.map((item: IAccordionItem) =>
+                            <AccordionItem key={item.getHeading()} accordionItem={item}/>)}
                 </div>
             </div>
         </div>
