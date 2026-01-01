@@ -3,6 +3,7 @@ import type {IHighLink} from "../model/interfaces/IHighLink.ts";
 import type {IBookADemoButton} from "../model/interfaces/IBookADemoButton.ts";
 import type {IWrapper} from "../model/interfaces/IWrapper.ts";
 import type {ITrustedCompanies} from "../model/interfaces/ITrustedCompanies.ts";
+import type {IFactCards} from "../model/interfaces/IFactCards.ts";
 
 export class AppConfig {
     public static readonly NAVBAR_POINTS: IPointOfNavbar[] = [
@@ -51,4 +52,22 @@ export class AppConfig {
         getHeading: () => 'Trusted by 50,000+ companies',
         getNamesOfImages: () => ['carded', 'focusfox', 'nowintech', 'optimer']
     }
+
+    public static readonly FACT_CARDS: IFactCards[] = [
+        {
+            getNameOfImage: () => 'thunderbolt',
+            getTitle: () => 'Fast. Really fast.',
+            getParagraph: () => 'Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.'
+        },
+        {
+            getNameOfImage: () => 'money',
+            getTitle: () => 'More bang for buck.',
+            getParagraph: () => 'Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.'
+        },
+        {
+            getNameOfImage: () => 'ok-gesture',
+            getTitle: () => 'Safe and secure.',
+            getParagraph: () => 'Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.'
+        }
+    ];
 }

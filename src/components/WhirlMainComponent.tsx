@@ -5,6 +5,7 @@ import {AppConfig} from "../data/AppConfig.ts";
 import {Wrapper} from "./Wrapper.tsx";
 import {TrustedCompanies} from "./TrustedCompanies.tsx";
 import {FactCard} from "./FactCard.tsx";
+import type {IFactCards} from "../model/interfaces/IFactCards.ts";
 
 export const WhirlMainComponent = () => {
     return (
@@ -16,7 +17,9 @@ export const WhirlMainComponent = () => {
                      wrapperData={AppConfig.WRAPPER_DATA}/>
             <TrustedCompanies data={AppConfig.TRUSTED_COMPANIES}/>
             <div className='fact-card__box'>
-                <FactCard/>
+                {AppConfig.FACT_CARDS.map((card: IFactCards) =>
+                    <FactCard key={card.getTitle()} factData={card}/>
+                )}
             </div>
         </>
     )
