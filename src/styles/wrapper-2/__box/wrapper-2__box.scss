@@ -1,3 +1,9 @@
 .wrapper-2__box {
   width: 501px;
+
+  & > ul {
+    list-style-image: url(../../../../public/images/accordion-items/vector.svg);
+    margin-bottom: 28px;
+    padding-left: 23px;
+  }
 }

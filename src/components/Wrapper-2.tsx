@@ -1,4 +1,5 @@
 import '../styles/wrapper-2/wrapper-2.scss';
+import '../styles/wrapper-2/__list/wrapper-2__list.scss';
 import '../styles/wrapper-2/__box/wrapper-2__box.scss';
 import '../styles/wrapper-2/__heading/wrapper-2__heading.scss';
 import '../styles/wrapper-2/__p/wrapper-2__p.scss';
@@ -21,10 +22,12 @@ export const Wrapper2 = ({data, bookADemo}: Wrapper2Props) => {
                 <div className='wrapper-2__box'>
                     <h3 className='wrapper-2__heading'>{data.getHeading()}</h3>
                     <p className='wrapper-2__p'>{data.getParagraph()}</p>
-                    <ol>
-                        {data.getList().map((item: string) => <li
-                            key={item}>{item}</li>)}
-                    </ol>
+                    <ul>
+                        {data.getList().map((item: string) =>
+                            <li
+                                key={item}
+                            className='wrapper-2__list'>{item}</li>)}
+                    </ul>
                     <BookADemo bookADemo={bookADemo}/>
                 </div>
             </div>

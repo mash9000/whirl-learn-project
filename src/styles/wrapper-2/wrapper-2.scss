@@ -9,8 +9,4 @@
   background: map.get(color.$colors, 'soft-blue');
   display: flex;
   align-items: center;
-
-  & > div {
-    outline: 1px dashed crimson;
-  }
 }
