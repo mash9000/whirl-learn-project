@@ -1,9 +1,14 @@
 @use 'sass:map';
 @use '../../../colors' as color;
 
+@font-face {
+  font-family: "Inter Regular";
+  font-style: normal;
+  font-weight: 400;
+  src: url(/public/fonts/Inter/inter-regular-webfont.woff2) format('woff');
+}
+
 .block-of-promises__accordion__item {
-  width: inherit;
-  height: 64px;
   box-sizing: border-box;
   border-top: 1px solid map.get(color.$colors, 'accordion-item-border');
   border-bottom: 1px solid map.get(color.$colors, 'accordion-item-border');
@@ -11,11 +16,24 @@
   grid-template: 64px / 32px 356px 18px;
   align-items: center;
 
+  font: {
+    family: "Inter Regular";
+    size: 16px;
+  }
+  color: map.get(color.$colors, 'black-text');
+  line-height: 24px;
+  letter-spacing: .2px;
+
   &:has(.block-of-promises__accordion__item__checkbox:checked) {
     .block-of-promises__accordion__item__p {
-      max-height: 72px;
+      max-height: 112px;
     }
-    margin-bottom: 72px;
+
+    height: 176px;
     transition: max-height 0.3s ease;
+
+    .block-of-promises__accordion__item__heading {
+      color: map.get(color.$colors, 'black-text');
+    }
   }
 }

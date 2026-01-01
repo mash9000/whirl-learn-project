@@ -3,7 +3,10 @@
   height: 345px;
   display: flex;
   flex-direction: column;
+  gap: 1px;
   transition: max-height 0.3s ease;
+  box-sizing: border-box;
+  padding: 17px 17px 9px 12px;
 
   outline: 1px dashed royalblue;
 }
