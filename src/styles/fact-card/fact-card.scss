@@ -1,0 +1,16 @@
+@use 'sass:map';
+@use '../colors' as color;
+
+.fact-card {
+  width: 355px;
+  height: 250px;
+  box-sizing: border-box;
+  padding: 32px;
+  gap: 11px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background: map.get(color.$colors, 'fact-card-yellow');
+
+  outline: 1px dashed crimson;
+}
