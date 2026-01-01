@@ -92,4 +92,34 @@ export class AppConfig {
             getParagraph: () => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
         }
     ]
+
+    public static readonly ABOUT_BLOCK: IFactCard[] = [
+        {
+            getNameOfImage: () => 'none',
+
+            getTitle: () => 'All on one place.',
+
+            getParagraph: () => 'Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
+
+            getBgColor: () => ({getColor: () => 'transparent'})
+        },
+        {
+            getNameOfImage: () => 'lens',
+
+            getTitle: () => 'Get daily alerts.',
+
+            getParagraph: () => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.',
+
+            getBgColor: () => ({getColor: () => 'transparent'})
+        },
+        {
+            getNameOfImage: () => 'screen',
+
+            getTitle: () => 'Safe and secure.',
+
+            getParagraph: () => 'Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
+
+            getBgColor: () => ({getColor: () => 'transparent'})
+        },
+    ]
 }
