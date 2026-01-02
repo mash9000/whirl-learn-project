@@ -15,7 +15,8 @@ import '../styles/footer/__newsletter/__input/footer__newsletter__input.scss';
 import '../styles/footer/__admin/__heading/footer__admin__heading.scss';
 import '../styles/footer/__admin/__link/footer__admin__link.scss';
 import '../styles/footer/__infobox/__heading/footer__infobox__heading.scss';
-
+import '../styles/footer/__logo-and-info/__img/footer__logo-and-info__img.scss';
+import '../styles/footer/__logo-and-info/__p/footer__logo-and-info__p.scss';
 import type {
     IBuildAndPoweredData
 } from "../model/interfaces/footer/IBuildAndPoweredData.ts";
