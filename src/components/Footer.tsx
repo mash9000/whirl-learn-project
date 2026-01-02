@@ -2,7 +2,9 @@ import '../styles/footer/footer.scss';
 import '../styles/footer/__inner-box/footer__inner-box.scss';
 import '../styles/footer/__newsletter/footer__newsletter.scss';
 import '../styles/footer/__admin/footer__admin.scss';
+import '../styles/footer/__admin/__link/footer__admin__link.scss';
 import '../styles/footer/__infobox/footer__infobox.scss';
+import '../styles/footer/__infobox/__link/footer__infobox__link.scss';
 import '../styles/footer/__address/footer__address.scss';
 import '../styles/footer/__logo-and-info/footer__logo-and-info.scss';
 import type {
@@ -12,10 +14,15 @@ import type {IInfoBoxData} from "../model/interfaces/footer/IInfoBoxData.ts";
 
 type FooterProps = {
     buildAndPoweredData: IBuildAndPoweredData,
-    infoBoxData: IInfoBoxData
+    infoBoxData: IInfoBoxData,
+    adminData: IInfoBoxData,
 }
 
-export const Footer = ({buildAndPoweredData, infoBoxData}: FooterProps) => {
+export const Footer = ({
+                           buildAndPoweredData,
+                           infoBoxData,
+                           adminData
+                       }: FooterProps) => {
     return (
         <footer className='footer'>
             <div className='footer__inner-box'>
@@ -38,23 +45,22 @@ export const Footer = ({buildAndPoweredData, infoBoxData}: FooterProps) => {
                     {infoBoxData.getItems().map((item: {
                         title: string,
                         link: URL
-                    }) => <a key={item.title} href={item.link.href}
-                             target='_blank'>{item.title}</a>)}
+                    }) => <a
+                        key={item.title}
+                        href={item.link.href}
+                        target='_blank'
+                        className='footer__infobox__link'>{item.title}</a>)}
                 </div>
                 <div className='footer__admin'>
-                    <h3 className='footer__admin__heading'>Admin</h3>
-                    <a href='#' target='_blank' className='footer__admin__link'>Style
-                        Guide</a>
-                    <a href='#' target='_blank'
-                       className='footer__admin__link'>Licenses</a>
-                    <a href='#' target='_blank'
-                       className='footer__admin__link'>Instructions</a>
-                    <a href='#' target='_blank'
-                       className='footer__admin__link'>Changelog</a>
-                    <a href='#' target='_blank'
-                       className='footer__admin__link'>Password</a>
-                    <a href='#' target='_blank'
-                       className='footer__admin__link'>404</a>
+                    <h3 className='footer__admin__heading'>{adminData.getHeading()}</h3>
+                    {adminData.getItems().map((item: {
+                        title: string,
+                        link: URL
+                    }) => <a
+                        key={item.title}
+                        href={item.link.href}
+                        target='_blank'
+                        className='footer__admin__link'>{item.title}</a>)}
                 </div>
                 <div className='footer__newsletter'>
                     <h3 className='footer__newsletter__heading'>Newsletter</h3>
