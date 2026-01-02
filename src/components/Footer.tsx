@@ -51,7 +51,7 @@ export const Footer = ({
                 <div className='footer__logo-and-info'>
                     <img
                         alt='logo'
-                        src='../../../../../public/images/logo.svg'
+                        src='/images/logo.svg'
                         className='footer__logo-and-info__img'/>
                     <p className='footer__logo-and-info__p'>Built by <a
                         href={buildAndPoweredData.getBuilt().link.href}
