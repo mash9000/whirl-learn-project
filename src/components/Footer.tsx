@@ -5,8 +5,15 @@ import '../styles/footer/__admin/footer__admin.scss';
 import '../styles/footer/__infobox/footer__infobox.scss';
 import '../styles/footer/__address/footer__address.scss';
 import '../styles/footer/__logo-and-info/footer__logo-and-info.scss';
+import type {
+    IBuildAndPoweredData
+} from "../model/interfaces/footer/IBuildAndPoweredData.ts";
 
-export const Footer = () => {
+type FooterProps = {
+    buildAndPoweredData: IBuildAndPoweredData
+}
+
+export const Footer = ({buildAndPoweredData}: FooterProps) => {
     return (
         <footer className='footer'>
             <div className='footer__inner-box'>
@@ -15,8 +22,14 @@ export const Footer = () => {
                         alt='logo'
                         src='../../../../../public/images/logo.svg'
                         className='footer__logo-and-info__img'/>
-                    <p className='footer__logo-and-info__p'>Built by <a href='#' target='_blank'>Nikolai Bain</a>.</p>
-                    <p className='footer__logo-and-info__p'>Powered by <a href='#' target='_blank'>Webflow</a>.</p>
+                    <p className='footer__logo-and-info__p'>Built by <a
+                        href={buildAndPoweredData.getBuilt().link.href}
+                        target='_blank'>{buildAndPoweredData.getBuilt().name}</a>.
+                    </p>
+                    <p className='footer__logo-and-info__p'>Powered by <a
+                        href={buildAndPoweredData.getPower().link.href}
+                        target='_blank'>{buildAndPoweredData.getPower().title}</a>.
+                    </p>
                 </div>
                 <div className='footer__infobox'>
                     <h3 className='footer__infobox__heading'>Info</h3>
@@ -58,7 +71,10 @@ export const Footer = () => {
                         className='footer__newsletter__input'/>
                 </div>
                 <address className='footer__address'>
-                    <p className='footer__address__rights'>© 2022 Whirl. All Rights Reserved. Illustrations by <a href='#' target='_blank'>Streamline</a></p>
+                    <p className='footer__address__rights'>© 2022 Whirl. All
+                        Rights Reserved. Illustrations by <a href='#'
+                                                             target='_blank'>Streamline</a>
+                    </p>
                     <div className='footer__address__social-networks'>
                         <a href='#' target='_blank' style={{}}></a>
                         <a href='#' target='_blank' style={{}}></a>

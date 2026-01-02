@@ -134,4 +134,6 @@ export class AppConfig {
             'You own the shares'
         ]
     }
+
+
 }
