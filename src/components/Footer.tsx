@@ -14,19 +14,26 @@ import type {IInfoBoxData} from "../model/interfaces/footer/IInfoBoxData.ts";
 import type {
     INewsletterData
 } from "../model/interfaces/footer/INewsletterData.ts";
+import type {
+    ISocialNetwork
+} from "../model/interfaces/footer/ISocialNetwork.ts";
 
 type FooterProps = {
     buildAndPoweredData: IBuildAndPoweredData,
     infoBoxData: IInfoBoxData,
     adminData: IInfoBoxData,
     newsletterData: INewsletterData,
+    illustrator: { name: string, link: URL },
+    socialNetworkData: ISocialNetwork[]
 }
 
 export const Footer = ({
                            buildAndPoweredData,
                            infoBoxData,
                            adminData,
-                           newsletterData
+                           newsletterData,
+                           illustrator,
+                           socialNetworkData
                        }: FooterProps) => {
     return (
         <footer className='footer'>
@@ -77,13 +84,20 @@ export const Footer = ({
                 </div>
                 <address className='footer__address'>
                     <p className='footer__address__rights'>© 2022 Whirl. All
-                        Rights Reserved. Illustrations by <a href='#'
-                                                             target='_blank'>Streamline</a>
+                        Rights Reserved. Illustrations by <a
+                            href={illustrator.link.href}
+                            target='_blank'>{illustrator.name}</a>
                     </p>
                     <div className='footer__address__social-networks'>
-                        <a href='#' target='_blank' style={{}}></a>
-                        <a href='#' target='_blank' style={{}}></a>
-                        <a href='#' target='_blank' style={{}}></a>
+                        {socialNetworkData.map((st: ISocialNetwork) =>
+                            <a
+                                key={st.getLink().href}
+                                href={st.getLink().href}
+                                aria-label={st.getImageName()}
+                                target='_blank'
+                                style={{
+                                    backgroundImage: `../../../../../public/images/social-networks/${st.getImageName()}.svg`
+                                }}></a>)}
                     </div>
                 </address>
             </div>
