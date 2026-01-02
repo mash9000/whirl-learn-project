@@ -2,12 +2,12 @@
 @use '../../colors' as color;
 
 .footer__address {
-  display: flex;
   grid-column: 1 / 5;
   grid-row: 2 / 3;
+  display: flex;
   align-self: end;
   justify-content: space-between;
   box-sizing: border-box;
   border-top: 1px solid map.get(color.$colors, 'border-address');
-  padding-bottom: 32px;
+  padding: 36px 0;
 }
