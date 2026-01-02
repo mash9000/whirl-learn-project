@@ -7,6 +7,9 @@ import '../styles/footer/__infobox/footer__infobox.scss';
 import '../styles/footer/__infobox/__link/footer__infobox__link.scss';
 import '../styles/footer/__address/footer__address.scss';
 import '../styles/footer/__logo-and-info/footer__logo-and-info.scss';
+import '../styles/footer/__address/__rights/footer__address__rights.scss';
+import '../styles/footer/__address/__social-networks/footer__address__social-networks.scss';
+import '../styles/footer/__address/__social-networks/__link/footer__address__social-networks__link.scss';
 import type {
     IBuildAndPoweredData
 } from "../model/interfaces/footer/IBuildAndPoweredData.ts";
@@ -95,8 +98,9 @@ export const Footer = ({
                                 href={st.getLink().href}
                                 aria-label={st.getImageName()}
                                 target='_blank'
+                                className='footer__address__social-networks__link'
                                 style={{
-                                    backgroundImage: `../../../../../public/images/social-networks/${st.getImageName()}.svg`
+                                    backgroundImage: `url(/images/social-network/${st.getImageName()}.svg)`
                                 }}></a>)}
                     </div>
                 </address>

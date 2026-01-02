@@ -1,0 +1,19 @@
+@use 'sass:map';
+@use '../../../colors' as color;
+@use '../../../generator-fonts' as gf;
+
+.footer__address__rights {
+  @include gf.generator-fonts('inter');
+  font-size: 13px;
+  line-height: 19.6px;
+  color: map.get(color.$colors, 'black-text');
+
+  & > a {
+    text-decoration: none;
+    color: map.get(color.$colors, 'soft-blue');
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
