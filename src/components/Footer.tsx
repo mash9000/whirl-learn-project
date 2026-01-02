@@ -8,12 +8,14 @@ import '../styles/footer/__logo-and-info/footer__logo-and-info.scss';
 import type {
     IBuildAndPoweredData
 } from "../model/interfaces/footer/IBuildAndPoweredData.ts";
+import type {IInfoBoxData} from "../model/interfaces/footer/IInfoBoxData.ts";
 
 type FooterProps = {
-    buildAndPoweredData: IBuildAndPoweredData
+    buildAndPoweredData: IBuildAndPoweredData,
+    infoBoxData: IInfoBoxData
 }
 
-export const Footer = ({buildAndPoweredData}: FooterProps) => {
+export const Footer = ({buildAndPoweredData, infoBoxData}: FooterProps) => {
     return (
         <footer className='footer'>
             <div className='footer__inner-box'>
@@ -32,19 +34,12 @@ export const Footer = ({buildAndPoweredData}: FooterProps) => {
                     </p>
                 </div>
                 <div className='footer__infobox'>
-                    <h3 className='footer__infobox__heading'>Info</h3>
-                    <a href='#' target='_blank'
-                       className='footer__infobox__link'>Features</a>
-                    <a href='#' target='_blank'
-                       className='footer__infobox__link'>Pricing</a>
-                    <a href='#' target='_blank'
-                       className='footer__infobox__link'>Blog</a>
-                    <a href='#' target='_blank'
-                       className='footer__infobox__link'>Support</a>
-                    <a href='#' target='_blank'
-                       className='footer__infobox__link'>Terms & Conditions</a>
-                    <a href='#' target='_blank'
-                       className='footer__infobox__link'>Privacy Policy</a>
+                    <h3 className='footer__infobox__heading'>{infoBoxData.getHeading()}</h3>
+                    {infoBoxData.getItems().map((item: {
+                        title: string,
+                        link: URL
+                    }) => <a key={item.title} href={item.link.href}
+                             target='_blank'>{item.title}</a>)}
                 </div>
                 <div className='footer__admin'>
                     <h3 className='footer__admin__heading'>Admin</h3>
