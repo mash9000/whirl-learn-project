@@ -1,0 +1,23 @@
+@use 'sass:map';
+@use '../../../colors' as color;
+@use '../../../generator-fonts' as gf;
+
+.footer__newsletter__input {
+  outline: none;
+  width: 216px;
+  height: 40px;
+  border: none;
+  box-sizing: border-box;
+  padding: 7px 15px;
+  border-bottom: 1px solid map.get(color.$colors, 'accordion-ittem-heading-non-active');
+  @include gf.generator-fonts('inter');
+  font-size: 13px;
+  line-height: 20px;
+  color: map.get(color.$colors, 'black-text');
+  background: url(/images/right-arrow-for-input.svg) no-repeat right center;
+  background-size: 6px 14px;
+
+  &::placeholder {
+    color: map.get(color.$colors, 'gray-text');
+  }
+}

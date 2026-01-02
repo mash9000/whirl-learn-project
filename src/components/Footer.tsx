@@ -10,6 +10,9 @@ import '../styles/footer/__logo-and-info/footer__logo-and-info.scss';
 import '../styles/footer/__address/__rights/footer__address__rights.scss';
 import '../styles/footer/__address/__social-networks/footer__address__social-networks.scss';
 import '../styles/footer/__address/__social-networks/__link/footer__address__social-networks__link.scss';
+import '../styles/footer/__newsletter/__heading/footer__newsletter__heading.scss';
+import '../styles/footer/__newsletter/__paragraph/footer__newsletter__paragraph.scss';
+import '../styles/footer/__newsletter/__input/footer__newsletter__input.scss';
 import type {
     IBuildAndPoweredData
 } from "../model/interfaces/footer/IBuildAndPoweredData.ts";

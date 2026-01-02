@@ -1,0 +1,10 @@
+@use 'sass:map';
+@use '../../../colors' as color;
+@use '../../../generator-fonts' as gf;
+
+.footer__newsletter__heading {
+  color: map.get(color.$colors, 'black-text');
+  @include gf.generator-fonts('inter');
+  font-size: 15px;
+  line-height: 24px;
+}
