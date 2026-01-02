@@ -27,8 +27,15 @@ export const WhirlMainComponent = () => {
             </div>
             <BlockOfPromises accordionItems={AppConfig.BLOCK_OF_PROMISES}/>
             <AboutBlock factData={AppConfig.ABOUT_BLOCK}/>
-            <Wrapper2 data={AppConfig.WRAPPER_2_DATA} bookADemo={AppConfig.BOOK_A_DEMO_BUTTON_PROPERTIES}/>
-            <Footer/>
+            <Wrapper2 data={AppConfig.WRAPPER_2_DATA}
+                      bookADemo={AppConfig.BOOK_A_DEMO_BUTTON_PROPERTIES}/>
+            <Footer
+                buildAndPoweredData={AppConfig.FOOTER_DATA.buildAndPoweredData}
+                infoBoxData={AppConfig.FOOTER_DATA.infoBoxData}
+                adminData={AppConfig.FOOTER_DATA.adminData}
+                newsletterData={AppConfig.FOOTER_DATA.newsletterData}
+                illustrator={AppConfig.FOOTER_DATA.illustrator}
+                socialNetworkData={AppConfig.FOOTER_DATA.socialNetworkData}/>
         </>
     )
 }

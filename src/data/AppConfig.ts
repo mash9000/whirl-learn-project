@@ -6,6 +6,16 @@ import type {ITrustedCompanies} from "../model/interfaces/ITrustedCompanies.ts";
 import type {IFactCard} from "../model/interfaces/IFactCard.ts";
 import type {IAccordionItem} from "../model/interfaces/IAccordionItem.ts";
 import type {IWrapper2} from "../model/interfaces/IWrapper2.ts";
+import type {
+    IBuildAndPoweredData
+} from "../model/interfaces/footer/IBuildAndPoweredData.ts";
+import type {IInfoBoxData} from "../model/interfaces/footer/IInfoBoxData.ts";
+import type {
+    INewsletterData
+} from "../model/interfaces/footer/INewsletterData.ts";
+import type {
+    ISocialNetwork
+} from "../model/interfaces/footer/ISocialNetwork.ts";
 
 export class AppConfig {
     public static readonly NAVBAR_POINTS: IPointOfNavbar[] = [
@@ -135,5 +145,107 @@ export class AppConfig {
         ]
     }
 
-
+    public static readonly FOOTER_DATA: {
+        buildAndPoweredData: IBuildAndPoweredData,
+        infoBoxData: IInfoBoxData,
+        adminData: IInfoBoxData,
+        newsletterData: INewsletterData,
+        illustrator: { getName(): string, getLink(): URL },
+        socialNetworkData: ISocialNetwork[]
+    } = {
+        buildAndPoweredData: {
+            getBuilt: () => ({
+                name: 'Nikolai Bain',
+                link: new URL('http://localhost:8080')
+            }),
+            getPower: () => ({
+                title: 'Webflow',
+                link: new URL('http://localhost:8080')
+            })
+        },
+        infoBoxData: {
+            getHeading: () => 'Info',
+            getItems: () => [
+                {
+                    title: 'Features',
+                    link: new URL('http://localhost:8080')
+                },
+                {
+                    title: 'Pricing',
+                    link: new URL('http://localhost:8080')
+                },
+                {
+                    title: 'Blog',
+                    link: new URL('http://localhost:8080')
+                },
+                {
+                    title: 'Support',
+                    link: new URL('http://localhost:8080')
+                },
+                {
+                    title: 'Terms & Conditions',
+                    link: new URL('http://localhost:8080')
+                },
+                {
+                    title: 'Privacy Policy',
+                    link: new URL('http://localhost:8080')
+                }
+            ]
+        },
+        adminData: {
+            getHeading: () => 'Admin',
+            getItems: () => [
+                {
+                    title: 'Style Guide',
+                    link: new URL('http://localhost:8080')
+                },
+                {
+                    title: 'Licenses',
+                    link: new URL('http://localhost:8080')
+                },
+                {
+                    title: 'Instructions',
+                    link: new URL('http://localhost:8080')
+                },
+                {
+                    title: 'Changelog',
+                    link: new URL('http://localhost:8080')
+                },
+                {
+                    title: 'Password',
+                    link: new URL('http://localhost:8080')
+                },
+                {
+                    title: '404',
+                    link: new URL('http://localhost:8080')
+                },
+            ]
+        },
+        newsletterData: {
+            getHeading: () => 'Newsletter',
+            getParagraph: () => 'Sign up for the latest news, company insights, and Whirl updates.',
+            getInputProperties: () => ({
+                type: 'email',
+                placeholder: 'Enter your email'
+            })
+        },
+        illustrator: {
+            getName: () => 'Streamline',
+            getLink: () => new URL('http://localhost:8080')
+        },
+        socialNetworkData: [
+            {
+                getImageName: () => 'x',
+                getLink: () => new URL('http://localhost:8080')
+            },
+            {
+                getImageName: () => 'linkedin',
+                getLink: () => new URL('http://localhost:8080')
+            },
+            {
+                getImageName: () => 'facebook',
+                getLink: () => new URL('http://localhost:8080')
+            },
+        ]
+    }
 }

@@ -23,7 +23,7 @@ type FooterProps = {
     infoBoxData: IInfoBoxData,
     adminData: IInfoBoxData,
     newsletterData: INewsletterData,
-    illustrator: { name: string, link: URL },
+    illustrator: { getName(): string, getLink(): URL },
     socialNetworkData: ISocialNetwork[]
 }
 
@@ -85,8 +85,8 @@ export const Footer = ({
                 <address className='footer__address'>
                     <p className='footer__address__rights'>© 2022 Whirl. All
                         Rights Reserved. Illustrations by <a
-                            href={illustrator.link.href}
-                            target='_blank'>{illustrator.name}</a>
+                            href={illustrator.getLink().href}
+                            target='_blank'>{illustrator.getName()}</a>
                     </p>
                     <div className='footer__address__social-networks'>
                         {socialNetworkData.map((st: ISocialNetwork) =>
