@@ -18,7 +18,7 @@ export const Wrapper2 = ({data, bookADemo}: Wrapper2Props) => {
         <div className='wrapper-2'>
             <div className='wrapper-2__subbox'>
                 <img alt={`${data.getBgName()}`}
-                     src='./wrappers/light-bulb.svg'/>
+                     src='/images/wrappers/light-bulb.svg'/>
                 <div className='wrapper-2__box'>
                     <h3 className='wrapper-2__heading'>{data.getHeading()}</h3>
                     <p className='wrapper-2__p'>{data.getParagraph()}</p>
