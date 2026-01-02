@@ -2,7 +2,6 @@ import '../styles/footer/footer.scss';
 import '../styles/footer/__inner-box/footer__inner-box.scss';
 import '../styles/footer/__newsletter/footer__newsletter.scss';
 import '../styles/footer/__admin/footer__admin.scss';
-import '../styles/footer/__admin/__link/footer__admin__link.scss';
 import '../styles/footer/__infobox/footer__infobox.scss';
 import '../styles/footer/__infobox/__link/footer__infobox__link.scss';
 import '../styles/footer/__address/footer__address.scss';
@@ -13,6 +12,9 @@ import '../styles/footer/__address/__social-networks/__link/footer__address__soc
 import '../styles/footer/__newsletter/__heading/footer__newsletter__heading.scss';
 import '../styles/footer/__newsletter/__paragraph/footer__newsletter__paragraph.scss';
 import '../styles/footer/__newsletter/__input/footer__newsletter__input.scss';
+import '../styles/footer/__admin/__heading/footer__admin__heading.scss';
+import '../styles/footer/__admin/__link/footer__admin__link.scss';
+
 import type {
     IBuildAndPoweredData
 } from "../model/interfaces/footer/IBuildAndPoweredData.ts";

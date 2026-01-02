@@ -1,0 +1,11 @@
+@use 'sass:map';
+@use '../../../generator-fonts' as gf;
+@use '../../../colors' as color;
+
+.footer__admin__heading {
+  @include gf.generator-fonts('inter');
+  font-size: 15px;
+  line-height: 24px;
+  color: map.get(color.$colors, 'black-text');
+  margin-bottom: 16px;
+}
