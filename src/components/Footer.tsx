@@ -4,11 +4,20 @@ import '../styles/footer/__newsletter/footer__newsletter.scss';
 import '../styles/footer/__admin/footer__admin.scss';
 import '../styles/footer/__infobox/footer__infobox.scss';
 import '../styles/footer/__address/footer__address.scss';
+import '../styles/footer/__logo-and-info/footer__logo-and-info.scss';
 
 export const Footer = () => {
     return (
         <footer className='footer'>
             <div className='footer__inner-box'>
+                <div className='footer__logo-and-info'>
+                    <img
+                        alt='logo'
+                        src='../../../../../public/images/logo.svg'
+                        className='footer__logo-and-info__img'/>
+                    <p className='footer__logo-and-info__p'>Built by <a href='#' target='_blank'>Nikolai Bain</a>.</p>
+                    <p className='footer__logo-and-info__p'>Powered by <a href='#' target='_blank'>Webflow</a>.</p>
+                </div>
                 <div className='footer__infobox'>
                     <h3 className='footer__infobox__heading'>Info</h3>
                     <a href='#' target='_blank'
