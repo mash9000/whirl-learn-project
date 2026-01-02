@@ -14,6 +14,7 @@ import '../styles/footer/__newsletter/__paragraph/footer__newsletter__paragraph.
 import '../styles/footer/__newsletter/__input/footer__newsletter__input.scss';
 import '../styles/footer/__admin/__heading/footer__admin__heading.scss';
 import '../styles/footer/__admin/__link/footer__admin__link.scss';
+import '../styles/footer/__infobox/__heading/footer__infobox__heading.scss';
 
 import type {
     IBuildAndPoweredData

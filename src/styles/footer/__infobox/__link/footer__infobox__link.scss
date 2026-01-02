@@ -1,3 +1,16 @@
+@use 'sass:map';
+@use '../../../generator-fonts' as gf;
+@use '../../../colors' as color;
+
 .footer__infobox__link {
-  
+  @include gf.generator-fonts('inter');
+  font-size: 14px;
+  line-height: 20px;
+  color: map.get(color.$colors, 'accordion-ittem-heading-non-active');
+  text-decoration: none;
+  margin-bottom: 10px;
+
+  &:hover {
+    text-decoration: underline;
+  }
 }
