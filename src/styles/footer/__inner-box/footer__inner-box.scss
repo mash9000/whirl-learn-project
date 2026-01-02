@@ -1,0 +1,11 @@
+.footer__inner-box {
+  width: 1230px;
+  height: inherit;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 41.5% repeat(3, 17.5%);
+  gap: 2%;
+  grid-template-rows: 80% 20%;
+
+  outline: 1px dashed crimson;
+}
