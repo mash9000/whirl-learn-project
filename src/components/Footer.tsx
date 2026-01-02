@@ -11,17 +11,22 @@ import type {
     IBuildAndPoweredData
 } from "../model/interfaces/footer/IBuildAndPoweredData.ts";
 import type {IInfoBoxData} from "../model/interfaces/footer/IInfoBoxData.ts";
+import type {
+    INewsletterData
+} from "../model/interfaces/footer/INewsletterData.ts";
 
 type FooterProps = {
     buildAndPoweredData: IBuildAndPoweredData,
     infoBoxData: IInfoBoxData,
     adminData: IInfoBoxData,
+    newsletterData: INewsletterData,
 }
 
 export const Footer = ({
                            buildAndPoweredData,
                            infoBoxData,
-                           adminData
+                           adminData,
+                           newsletterData
                        }: FooterProps) => {
     return (
         <footer className='footer'>
@@ -63,12 +68,11 @@ export const Footer = ({
                         className='footer__admin__link'>{item.title}</a>)}
                 </div>
                 <div className='footer__newsletter'>
-                    <h3 className='footer__newsletter__heading'>Newsletter</h3>
-                    <p className='footer__newsletter__paragraph'>Sign up for the
-                        latest news, company insights, and Whirl updates.</p>
+                    <h3 className='footer__newsletter__heading'>{newsletterData.getHeading()}</h3>
+                    <p className='footer__newsletter__paragraph'>{newsletterData.getParagraph()}</p>
                     <input
-                        type='email'
-                        placeholder='Your email address'
+                        type={newsletterData.getInputProperties().type}
+                        placeholder={newsletterData.getInputProperties().placeholder}
                         className='footer__newsletter__input'/>
                 </div>
                 <address className='footer__address'>
